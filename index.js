@@ -9,49 +9,49 @@ import {
   ViewPropTypes,
   TouchableWithoutFeedback,
 } from 'react-native';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
 
 
 const PAGE_CHANGE_DELAY = 4000;
 
 // if ViewPropTypes is not defined fall back to View.propTypes (to support RN < 0.44)
-const viewPropTypes = ViewPropTypes || View.propTypes;
+// const viewPropTypes = ViewPropTypes || View.propTypes;
 
 /**
  * Animates pages in cycle
  * (loop possible if children count > 1)
 */
 export default class Carousel extends Component {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    autoplay: PropTypes.bool,
-    delay: PropTypes.number,
-    currentPage: PropTypes.number,
-    style: viewPropTypes.style,
-    pageStyle: viewPropTypes.style,
-    contentContainerStyle: viewPropTypes.style,
-    pageInfo: PropTypes.bool,
-    pageInfoBackgroundColor: PropTypes.string,
-    pageInfoTextStyle: Text.propTypes.style,
-    pageInfoBottomContainerStyle: viewPropTypes.style,
-    pageInfoTextSeparator: PropTypes.string,
-    bullets: PropTypes.bool,
-    bulletsContainerStyle: Text.propTypes.style,
-    bulletStyle: Text.propTypes.style,
-    arrows: PropTypes.bool,
-    arrowsContainerStyle: Text.propTypes.style,
-    arrowStyle: Text.propTypes.style,
-    leftArrowStyle: Text.propTypes.style,
-    rightArrowStyle: Text.propTypes.style,
-    leftArrowText: PropTypes.string,
-    rightArrowText: PropTypes.string,
-    chosenBulletStyle: Text.propTypes.style,
-    onAnimateNextPage: PropTypes.func,
-    onPageBeingChanged: PropTypes.func,
-    swipe: PropTypes.bool,
-    isLooped: PropTypes.bool,
-  };
+  // static propTypes = {
+  //   children: PropTypes.node.isRequired,
+  //   autoplay: PropTypes.bool,
+  //   delay: PropTypes.number,
+  //   currentPage: PropTypes.number,
+  //   style: viewPropTypes.style,
+  //   pageStyle: viewPropTypes.style,
+  //   contentContainerStyle: viewPropTypes.style,
+  //   pageInfo: PropTypes.bool,
+  //   pageInfoBackgroundColor: PropTypes.string,
+  //   pageInfoTextStyle: Text.propTypes.style,
+  //   pageInfoBottomContainerStyle: viewPropTypes.style,
+  //   pageInfoTextSeparator: PropTypes.string,
+  //   bullets: PropTypes.bool,
+  //   bulletsContainerStyle: Text.propTypes.style,
+  //   bulletStyle: Text.propTypes.style,
+  //   arrows: PropTypes.bool,
+  //   arrowsContainerStyle: Text.propTypes.style,
+  //   arrowStyle: Text.propTypes.style,
+  //   leftArrowStyle: Text.propTypes.style,
+  //   rightArrowStyle: Text.propTypes.style,
+  //   leftArrowText: PropTypes.string,
+  //   rightArrowText: PropTypes.string,
+  //   chosenBulletStyle: Text.propTypes.style,
+  //   onAnimateNextPage: PropTypes.func,
+  //   onPageBeingChanged: PropTypes.func,
+  //   swipe: PropTypes.bool,
+  //   isLooped: PropTypes.bool,
+  // };
 
   static defaultProps = {
     delay: PAGE_CHANGE_DELAY,
